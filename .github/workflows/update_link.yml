@@ -2,18 +2,21 @@ name: Update YouTube Stream Link
 
 on:
   schedule:
-    - cron: '0 */4 * * *' # প্রতি ৪ ঘণ্টা পরপর চলবে
-  workflow_dispatch: # ম্যানুয়ালি রান করার অপশন
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
