@@ -5,6 +5,7 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch:
 
+# ঠিক এই জায়গায় নিচের ২ লাইন যুক্ত করুন
 permissions:
   contents: write
 
